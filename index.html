@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -93,7 +94,14 @@
       	 <img src="gofood.jpg" class="img-thumbnail" alt="Cinque Terre" width="157" height="27"> 
       	 <img src="grabfood.png" class="img-thumbnail" alt="Cinque Terre" width="157" height="27"> 
       	 </div>
-  	 </div>
+  	
+	  	<div class="w3-content w3-section" style="max-width:350px">
+		  <img class="mySlides w3-animate-fading" src="gpr1.jpg" style="width:100%">
+		  <img class="mySlides w3-animate-fading" src="gpr2.jpg" style="width:100%">
+		  <img class="mySlides w3-animate-fading" src="gpr3.jpg" style="width:100%">
+		  <img class="mySlides w3-animate-fading" src="gpr4.jpg" style="width:100%">
+		</div>
+  	</div>
 
 	<!-- profile -->
 	<div id="profile" class="modal fade" role="dialog">
@@ -163,5 +171,21 @@
 
 </div>
 </div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+</script>
 </body>
 </html>
